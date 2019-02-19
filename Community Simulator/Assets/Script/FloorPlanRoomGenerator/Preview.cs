@@ -67,7 +67,8 @@ public class Preview : MonoBehaviour
         for (int i =0; i<Cubes.Count;i++) {
             Cubes[i].Selection();
         }
-        Instantiate(cubePrefab, transform.position, transform.rotation);
+        GameObject pre = Instantiate(cubePrefab, transform.position, transform.rotation);
+        pre.transform.SetParent(GameObject.FindGameObjectWithTag("playersaved").transform);
         Destroy(gameObject);
     }
     public bool canItBuild() {

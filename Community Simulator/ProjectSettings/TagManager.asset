@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Reload
+  - playersaved
+  - fool
   layers:
   - Default
   - TransparentFX

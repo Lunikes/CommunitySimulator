@@ -7,6 +7,9 @@ public class BuildSystem : MonoBehaviour
     public Camera camare;
     public LayerMask layer;
 
+    public GameObject fps;
+    bool fpsbool = false;
+
     public BuildSelect selector;
 
     GameObject previewObj;
@@ -16,6 +19,7 @@ public class BuildSystem : MonoBehaviour
 
     private void Update()
     {
+        
         if (Input.GetMouseButtonDown(0)&&isBuilding&&preview.canItBuild()) {
             Build();
         }
@@ -28,9 +32,16 @@ public class BuildSystem : MonoBehaviour
         if (isBuilding) {
             Ray();
         }
+
+        if (Input.GetButtonDown("Cancel"))
+        {
+            fpsbool = !fpsbool;
+            fps.SetActive(false);
+        }
     }
   public void NewBuild(GameObject cube) {
         previewObj = Instantiate(cube, Vector3.zero, Quaternion.identity);
+       
         preview = previewObj.GetComponent<Preview>();
         isBuilding = true;
     }
@@ -45,6 +56,19 @@ public class BuildSystem : MonoBehaviour
         preview.build();
         StopBuild();
     }
+    public void switchFpsModelOn()
+    {
+        fpsbool = !fpsbool;
+        fps.SetActive(true);
+    }
+ 
+    public void BuildCharacter(GameObject cube) {
+        previewObj = Instantiate(cube, Vector3.zero, Quaternion.identity);
+
+        preview = previewObj.GetComponent<Preview>();
+        isBuilding = true;
+
+    }
     void Ray() {
         Ray ray = camare.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -55,13 +79,13 @@ public class BuildSystem : MonoBehaviour
         }
     }
     void PositionObj(Vector3 position) {
-        float x = Mathf.RoundToInt(position.x);
-        float z = Mathf.RoundToInt(position.z);
-        float y = Mathf.RoundToInt(position.y+1);
-
-        previewObj.transform.position = new Vector3(x, y, z);
+        Vector3 realposition = preview.transform.position;
+        realposition = Vector3.Lerp(realposition, position, 50f);
+        previewObj.transform.position = new Vector3(Mathf.Round(realposition.x), Mathf.Round(realposition.y)+1, Mathf.Round(realposition.z));
     }
     public bool GetIsBuilding() {
         return isBuilding;
     }
+
+   
 }
