@@ -17,7 +17,7 @@ public class GridSpawner : MonoBehaviour
         
     }
 
-    // Update is called once per frameam
+    // Update is called once per frame
     void Update()
     {
         
@@ -39,10 +39,10 @@ public class GridSpawner : MonoBehaviour
         {
             for (int z = 0; z < zLength; z++)
             {
-                Vector3 position = new Vector3(x, 0, z);//Off set the grid a bit so it will round to whole interger by building system so everything will line up to the edge of the cube
+                Vector3 position = new Vector3(x + 0.5f, 0, z + 0.5f);//Off set the grid a bit so it will round to whole interger by building system so everything will line up to the edge of the cube
                 GameObject cube = Instantiate(cubePrefab, position, Quaternion.identity);//So the actual instantiated gameObject are not rotating to anywhere
                 cube.GetComponent<GroundCube>().SetBuildSystem(buildSystem);
-                cube.transform.SetParent(GameObject.FindGameObjectWithTag("playersaved").transform);
+                cube.transform.SetParent(transform);
             }
 
         }

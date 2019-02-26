@@ -28,7 +28,6 @@ public class GroundCube : MonoBehaviour
     }
     public void SetBuildSystem(BuildSystem bs) {
         buildSystem = bs;
-      
     }
     public void OnMouseEnter()
     {
@@ -37,8 +36,7 @@ public class GroundCube : MonoBehaviour
         }
         }
     public void OnMouseExit()
-    {      
-         
+    {
         if (!buildSystem.GetIsBuilding())
         {
             Selection();
