@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -130,7 +130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &58636550
 RectTransform:
   m_ObjectHideFlags: 0
@@ -143,12 +143,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1873073911}
-  m_Father: {fileID: 1802008281}
+  m_Father: {fileID: 1958956105}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.3, y: -48.7}
+  m_AnchoredPosition: {x: 142.30003, y: -38.519993}
   m_SizeDelta: {x: 314.7, y: 84.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &58636551
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.58431375, g: 0, b: 0, a: 1}
+    m_HighlightedColor: {r: 0.93861246, g: 1, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -191,9 +191,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1333110279}
-        m_MethodName: changemenuscene
-        m_Mode: 5
+      - m_Target: {fileID: 632448610}
+        m_MethodName: gameExit
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -273,12 +273,12 @@ RectTransform:
   m_Children:
   - {fileID: 1014175076}
   - {fileID: 2133383578}
-  m_Father: {fileID: 762835194}
+  m_Father: {fileID: 1998281424}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -158.38, y: -112.3}
+  m_AnchoredPosition: {x: -28.380005, y: -102.119995}
   m_SizeDelta: {x: 289.25, y: 47.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &270199562
@@ -558,12 +558,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 601562868}
-  m_Father: {fileID: 1802008281}
+  m_Father: {fileID: 1958956105}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.299011, y: -147.3}
+  m_AnchoredPosition: {x: 142.29904, y: -137.12}
   m_SizeDelta: {x: 314.7, y: 84.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &471133310
@@ -587,7 +587,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.58431375, g: 0, b: 0, a: 1}
+    m_HighlightedColor: {r: 0.93861246, g: 1, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -606,9 +606,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1333110279}
-        m_MethodName: changemenuscene
-        m_Mode: 5
+      - m_Target: {fileID: 632448610}
+        m_MethodName: gameExit
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -826,8 +826,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1958956105}
-  - {fileID: 1998281424}
+  - {fileID: 1802008281}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -848,6 +847,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b13213aa51ee4b347b74a7000ccf6237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  settingsCanvas: {fileID: 1998281423}
+  mainMenuCanvas: {fileID: 1958956104}
 --- !u!1 &661936489
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,12 +880,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1321448922}
-  m_Father: {fileID: 1802008281}
+  m_Father: {fileID: 1958956105}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.3, y: 157.4}
+  m_AnchoredPosition: {x: 142.30003, y: 167.58002}
   m_SizeDelta: {x: 314.7, y: 82.89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &661936491
@@ -908,7 +909,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.5849056, g: 0, b: 0, a: 1}
+    m_HighlightedColor: {r: 0.93861246, g: 1, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -976,85 +977,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 661936489}
-  m_CullTransparentMesh: 0
---- !u!1 &762835193
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 762835194}
-  - component: {fileID: 762835196}
-  - component: {fileID: 762835195}
-  m_Layer: 5
-  m_Name: Panel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &762835194
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 762835193}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1089163650}
-  - {fileID: 1856853480}
-  - {fileID: 270199561}
-  - {fileID: 1705073827}
-  - {fileID: 2130161367}
-  m_Father: {fileID: 1998281424}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 130.00002, y: 10.180008}
-  m_SizeDelta: {x: 649, y: 272}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &762835195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 762835193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 8934f7763af9e41ee8845ae14c5473f1, type: 2}
-  m_Color: {r: 0.2363622, g: 0.21733712, b: 0.41509432, a: 0.392}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 635ec5eb6565e4e4d91e520fa7c0067e, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
---- !u!222 &762835196
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 762835193}
   m_CullTransparentMesh: 0
 --- !u!1 &782208624
 GameObject:
@@ -1325,12 +1247,12 @@ RectTransform:
   m_Children:
   - {fileID: 782208625}
   - {fileID: 1265883843}
-  m_Father: {fileID: 762835194}
+  m_Father: {fileID: 1998281424}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -158.38, y: -61.95}
+  m_AnchoredPosition: {x: -28.380005, y: -51.769993}
   m_SizeDelta: {x: 289.25, y: 47.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1089163651
@@ -1866,12 +1788,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 791434484}
-  m_Father: {fileID: 1802008281}
+  m_Father: {fileID: 1958956105}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.299, y: 55.11}
+  m_AnchoredPosition: {x: 142.29903, y: 65.29001}
   m_SizeDelta: {x: 314.7, y: 84.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1678857273
@@ -1895,7 +1817,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.58431375, g: 0, b: 0, a: 1}
+    m_HighlightedColor: {r: 0.93861246, g: 1, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1914,9 +1836,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 632448605}
-        m_MethodName: 
-        m_Mode: 5
+      - m_Target: {fileID: 632448610}
+        m_MethodName: settingsMenuUI
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1995,12 +1917,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1910719489}
-  m_Father: {fileID: 762835194}
+  m_Father: {fileID: 1998281424}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -158.38, y: 101.75}
+  m_AnchoredPosition: {x: -28.380005, y: 111.92999}
   m_SizeDelta: {x: 289.25, y: 50.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1705073828
@@ -2024,7 +1946,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.58431375, g: 0, b: 0, a: 1}
+    m_HighlightedColor: {r: 0.93861246, g: 1, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -2043,7 +1965,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1333110279}
         m_MethodName: changemenuscene
         m_Mode: 5
         m_Arguments:
@@ -2122,17 +2044,15 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 58636550}
-  - {fileID: 661936490}
-  - {fileID: 1678857272}
-  - {fileID: 471133309}
-  m_Father: {fileID: 1958956105}
+  - {fileID: 1958956105}
+  - {fileID: 1998281424}
+  m_Father: {fileID: 632448609}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 130.00002, y: 10.180008}
-  m_SizeDelta: {x: 649, y: 272}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0.000030518}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1802008282
 MonoBehaviour:
@@ -2202,12 +2122,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 367899628}
-  m_Father: {fileID: 762835194}
+  m_Father: {fileID: 1998281424}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 26.595001, y: -87.125}
+  m_AnchoredPosition: {x: 156.59502, y: -76.94499}
   m_SizeDelta: {x: 80.7, y: 97.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1856853481
@@ -2231,7 +2151,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.58431375, g: 0, b: 0, a: 1}
+    m_HighlightedColor: {r: 0.93861246, g: 1, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -2468,7 +2388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1958956105}
   m_Layer: 0
-  m_Name: MainMenu
+  m_Name: MainMenuC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2482,11 +2402,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1958956104}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -130.00002, y: -10.180008, z: 0}
+  m_LocalPosition: {x: -130.00003, y: -10.180008, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1802008281}
-  m_Father: {fileID: 632448609}
+  - {fileID: 58636550}
+  - {fileID: 661936490}
+  - {fileID: 1678857272}
+  - {fileID: 471133309}
+  m_Father: {fileID: 1802008281}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1998281423
@@ -2499,7 +2422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1998281424}
   m_Layer: 0
-  m_Name: Settings
+  m_Name: SettingsC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2513,11 +2436,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1998281423}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -130.00002, y: -10.180008, z: 0}
+  m_LocalPosition: {x: -130.00003, y: -10.180008, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 762835194}
-  m_Father: {fileID: 632448609}
+  - {fileID: 1089163650}
+  - {fileID: 1856853480}
+  - {fileID: 270199561}
+  - {fileID: 1705073827}
+  - {fileID: 2130161367}
+  m_Father: {fileID: 1802008281}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2130161366
@@ -2551,12 +2478,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1230234518}
-  m_Father: {fileID: 762835194}
+  m_Father: {fileID: 1998281424}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -158.38, y: 151.25}
+  m_AnchoredPosition: {x: -28.380005, y: 161.43}
   m_SizeDelta: {x: 289.25, y: 48.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2130161368
@@ -2580,7 +2507,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.58431375, g: 0, b: 0, a: 1}
+    m_HighlightedColor: {r: 0.93861246, g: 1, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -2599,9 +2526,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: changemenuscene
-        m_Mode: 5
+      - m_Target: {fileID: 632448610}
+        m_MethodName: mainMenuUI
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

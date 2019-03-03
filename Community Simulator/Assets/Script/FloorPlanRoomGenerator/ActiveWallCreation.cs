@@ -28,5 +28,10 @@ public class ActiveWallCreation : MonoBehaviour
         } else {
             wallc.enabled = !wallc.enabled ;
         }
+
+        if (Input.GetButtonDown("Cancel"))
+        {
+            iswallc = false;
+        }
     }
 }

@@ -10,12 +10,23 @@ public class BuildSystem : MonoBehaviour
     public GameObject fps;
     bool fpsbool = false;
 
+
+    public GameObject uiwheel;
+    public GameObject CanBeHidefps;
+    public GameObject CanBeHide;
+    public GameObject uiToggle;
+
     public BuildSelect selector;
 
     GameObject previewObj;
     Preview preview;
+    Deconstruction deletion;
+
+    int pauser = 0;
 
     bool isBuilding = false;
+    bool fortut = true;
+    bool forqwheel = false;
 
     private void Update()
     {
@@ -33,10 +44,33 @@ public class BuildSystem : MonoBehaviour
             Ray();
         }
 
+        if (Input.GetButtonDown("o"))
+        {
+            float rotateX = Random.Range(0, 50);
+            transform.eulerAngles = new Vector3(0, 0, rotateX);
+        }
+
         if (Input.GetButtonDown("Cancel"))
         {
             fpsbool = !fpsbool;
             fps.SetActive(false);
+            CanBeHidefps.SetActive(false);
+            CanBeHide.SetActive(true);
+            uiToggle.SetActive(true);
+        }
+        if (Input.GetButtonDown("t"))
+        {
+            fortut = !fortut;
+            CanBeHidefps.SetActive(fortut);
+        }
+        if (Input.GetButtonDown("p"))
+        {
+            pauseFun();
+        }
+        if (Input.GetButtonDown("q"))
+        {
+            forqwheel = !forqwheel;
+            uiwheel.SetActive(forqwheel);
         }
     }
   public void NewBuild(GameObject cube) {
@@ -45,6 +79,22 @@ public class BuildSystem : MonoBehaviour
         preview = previewObj.GetComponent<Preview>();
         isBuilding = true;
     }
+
+    public void pauseFun()
+    {
+        if (pauser == 0)
+        {
+            Time.timeScale = 0;
+            pauser = 1;
+        }
+        else
+        {
+            Time.timeScale = 1;
+            pauser = 0;
+        }
+
+    }
+
     void StopBuild() {
         Destroy(previewObj);
         preview = null;
@@ -60,6 +110,10 @@ public class BuildSystem : MonoBehaviour
     {
         fpsbool = !fpsbool;
         fps.SetActive(true);
+        CanBeHidefps.SetActive(true);
+        CanBeHide.SetActive(false);
+        uiToggle.SetActive(false);
+
     }
  
     public void BuildCharacter(GameObject cube) {
@@ -86,6 +140,6 @@ public class BuildSystem : MonoBehaviour
     public bool GetIsBuilding() {
         return isBuilding;
     }
-
+   
    
 }
