@@ -9,5 +9,10 @@ THe user will click the icon to start the game. The the button to go to 3d edit 
 
 In the 3d edit scene the user can click the 1x1 or 2x2 to create blocks to place. THe wallcreation buton enables the mouse to click to create walls. The destruction button enables the mouse to delete blocks with a mouse click. The input text field are the demenions of the base grid spawned in. The exit button takes you to the main menu. The topdown button makes the camera have a topdown view for the user. The first peron button puts the user into a first person camera. The uitoggle button toggles on and off the ui for the user.Pressinf the t key hides/unhides the tutorial text box. The escape key takes the person out of first person. The p key pauses the game when not in first peron. The q key opens a menu for first person.
 
+How to install, and run the development application.
+First the user will go to https://unity3d.com/get-unity/download/archive to download unity 3.3f.
+Then the user downloads the project via the online cloud sotrage from unity.
+The nthe project can be open from the local storage the user is then able to load the project and make changes or tet it with the play button.
+
 
 https://app.zenhub.com/workspaces/communitysimulator-5c6c40d7f309732dfc9fa9db/boards?repos=169507147
