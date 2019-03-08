@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DontDestory : MonoBehaviour
+namespace desz
 {
-    private void Awake()
+    public class DontDestory : MonoBehaviour
     {
-        DontDestroyOnLoad(transform.gameObject);
-        Debug.Log("yashila");
+        public void Awake()
+        {
+            DontDestroyOnLoad(transform.gameObject);
+            Debug.Log("yashila");
+        }
     }
 }
