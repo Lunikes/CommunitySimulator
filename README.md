@@ -12,7 +12,6 @@ In the 3d edit scene the user can click the 1x1 or 2x2 to create blocks to place
 How to install, and run the development application.
 First the user will go to https://unity3d.com/get-unity/download/archive to download unity 3.3f.
 Then the user downloads the project via the online cloud sotrage from unity.
-The nthe project can be open from the local storage the user is then able to load the project and make changes or tet it with the play button.
-
+Then the project can be open from the local storage the user is then able to load the project and make changes or test it with the play button.
 
 https://app.zenhub.com/workspaces/communitysimulator-5c6c40d7f309732dfc9fa9db/boards?repos=169507147
