@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Reload
+  - playersaved
+  - fool
+  - floorplan
   layers:
   - Default
   - TransparentFX
