@@ -21,11 +21,11 @@ public class tutorial : MonoBehaviour
         }
         if (page == 1)
         {
-            textshown.text = "You can use the esc key to exit first person mode,destruction mode and wall creation mode";
+            textshown.text = "You can use the esc key to exit first person mode";
         }
         if (page == 2)
         {
-            textshown.text = "you can click the toggle button to enable/disable the default ui";
+            textshown.text = "you can click the toggle button to enable the default ui";
         }
         if (page == 3)
         {
@@ -33,7 +33,7 @@ public class tutorial : MonoBehaviour
         }
         if (page == 4)
         {
-            textshown.text = "you can click the p when not in first person to pause/unpause the application, this disables most features.";
+            textshown.text = "In order to open the fps menu click the \"q\" key";
         }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class FirstPersonController : MonoBehaviour
 {
     CharacterController TheyHave;
-    public float speed = 5f;
+    public float speed;
     // Start is called before the first frame update
     float y = 0;
     public float Gravity = -10f;
@@ -24,19 +24,42 @@ public class FirstPersonController : MonoBehaviour
     float xMouse = 0f;
     float yMouse = 0f;
 
+    Camera fpsCam;
+
+
+    public Transform doorL;
+    public playerInteraction focus;
 
     void Start()
     {
-
+        fpsCam = GetComponent<Camera>();
         TheyHave = GetComponent<CharacterController>();
     }
-
+    int trial = 0;
     // Update is called once per frame
     void Update()
     {
+        
         GetInput();
         UpdateMovement();
+        Ray ray = fpsCam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            Debug.Log("I'm looking at " + hit.transform.name);
+            if(hit.transform.name == "Door.L" && trial ==0)
+            {
+                Debug.Log("Open Door");
+                doorL.Rotate(0.0f,90.0f,0.0f);
+                trial = 1;
+            }
+        }
+        else
+        {
+            Debug.Log("I'm looking at nothing!");
+        }
     }
+
 
     void GetInput() {
         xInput = Input.GetAxis("Horizontal");
