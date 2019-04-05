@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CommunityMap.unity
     guid: 04ffe4ffb90f83b418d98a209da67cca
-  - enabled: 1
-    path: Assets/Scenes/secondfloor.unity
-    guid: 7dfeaa3a363369e41b89585b5bc01857
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

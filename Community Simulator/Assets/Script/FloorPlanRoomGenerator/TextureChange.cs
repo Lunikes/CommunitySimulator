@@ -7,20 +7,15 @@ public class TextureChange : MonoBehaviour
 
     public Texture[] textures;
     public int currentTexture;
+    public Texture textureSelected;
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void textC(int num)
     {
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            currentTexture++;
-            currentTexture %= textures.Length;
-            GetComponent<Renderer>().material.mainTexture = textures[currentTexture];
-        }
-    }
+        GetComponent<Renderer>().sharedMaterial.mainTexture = textures[num];
+    } 
 }
