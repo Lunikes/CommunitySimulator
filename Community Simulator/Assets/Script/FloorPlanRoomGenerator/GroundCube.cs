@@ -29,13 +29,13 @@ public class GroundCube : MonoBehaviour
     public void SetBuildSystem(BuildSystem bs) {
         buildSystem = bs;
       
-    }
+    }/*
     public void OnMouseEnter()
     {
         if (!buildSystem.GetIsBuilding()) {
             Selection();
         }
-        }
+    }
     public void OnMouseExit()
     {      
          
@@ -43,7 +43,7 @@ public class GroundCube : MonoBehaviour
         {
             Selection();
         }
-    }
+    }*/
     public void Selection() {
         isSelected = !isSelected;//toggle boolean for select and de-select
         if (isSelected)

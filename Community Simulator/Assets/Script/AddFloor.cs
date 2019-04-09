@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AddFloor : MonoBehaviour
 {
@@ -11,8 +12,8 @@ public class AddFloor : MonoBehaviour
     public GameObject cubePrefab;
     public BuildSystem buildSystem;
 
-    public int xlength;
-    public int zlength;
+    public InputField xInput;
+    public InputField zInput;
 
     float getyposition() {
         go = GameObject.FindGameObjectsWithTag("fool");
@@ -36,9 +37,12 @@ public class AddFloor : MonoBehaviour
     {
         totalfloor++;
         float y = getyposition();
-        xlength = GetComponent<GridSpawner>().xLength;
-        zlength = GetComponent<GridSpawner>().zLength;
+        // xlength = GetComponent<GridSpawner>().xLength;
+        // zlength = GetComponent<GridSpawner>().zLength;
 
+
+        int xlength = int.Parse(xInput.text);
+        int zlength = int.Parse(zInput.text);
         for (int x = 0; x < xlength; x++)
         {
             for (int z = 0; z < zlength; z++)

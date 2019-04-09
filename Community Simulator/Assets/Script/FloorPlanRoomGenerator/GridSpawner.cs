@@ -24,7 +24,7 @@ public class GridSpawner : MonoBehaviour
     }
     public void setXValue() {
      
-        xLength = int.Parse(xva.text); ;
+        xLength = int.Parse(xva.text); 
         
         Debug.Log("xLength is now" + xLength);
     }
@@ -43,6 +43,7 @@ public class GridSpawner : MonoBehaviour
                 GameObject cube = Instantiate(cubePrefab, position, Quaternion.identity);//So the actual instantiated gameObject are not rotating to anywhere
                 cube.GetComponent<GroundCube>().SetBuildSystem(buildSystem);
                 cube.transform.SetParent(GameObject.FindGameObjectWithTag("playersaved").transform);
+                cube.GetComponent<Renderer>().sharedMaterial.mainTexture = null;
             }
 
         }
