@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 public class FirstPersonController : MonoBehaviour
 {
     CharacterController TheyHave;
@@ -26,6 +27,16 @@ public class FirstPersonController : MonoBehaviour
     void Start()
     {
         TheyHave = GetComponent<CharacterController>();
+
+        string path = Application.persistentDataPath + "/Cha.racter";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+            SavedData data = formatter.Deserialize(stream) as SavedData;
+            stream.Close();
+        }
     }
     int trial = 0;
     // Update is called once per frame

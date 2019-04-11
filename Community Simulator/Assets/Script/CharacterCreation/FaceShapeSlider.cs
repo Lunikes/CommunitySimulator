@@ -10,9 +10,9 @@ using UnityEngine.UI;
         private void Start()
         {
             ShapeName = ShapeName.Trim();
-            GetComponent<Slider>();
+        slider = GetComponent<Slider>();
 
-            slider.onValueChanged.AddListener(value => characterCustomization.Instance.ChangeBlendshapeValue(ShapeName, value));
+        slider.onValueChanged.AddListener(value => characterCustomization.Instance.ChangeBlendshapeValue(ShapeName, value));
 
         }
     }

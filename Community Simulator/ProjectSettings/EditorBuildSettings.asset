@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/FloorPlanCaseOne.unity
     guid: 25d4fea1ac690df499f670011b6baf74
   - enabled: 1
+    path: Assets/Scenes/CharacterCreation.unity
+    guid: 7ee32d594ef33e6448ba53c400ddb06b
+  - enabled: 1
     path: Assets/Scenes/CommunityMap.unity
     guid: 04ffe4ffb90f83b418d98a209da67cca
   - enabled: 0

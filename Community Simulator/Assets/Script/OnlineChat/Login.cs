@@ -51,7 +51,7 @@ public class Login : MonoBehaviour
             userNameD = userName.GetComponent<InputField>().text = "";
             passwordD = password.GetComponent<InputField>().text = "";
             print("Login sucess!");
-            Application.LoadLevel("CommunityMap");
+            Application.LoadLevel("CharacterCreation");
             //and further 
         }
 

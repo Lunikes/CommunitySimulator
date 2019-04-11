@@ -1,4 +1,5 @@
 ﻿public class FaceShape{
+
     public int positiveIndex { get; set; }
     public int negativeIndex { get; set; }
 
