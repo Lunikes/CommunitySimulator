@@ -42,7 +42,7 @@ public class GridSpawner : MonoBehaviour
                 Vector3 position = new Vector3(x, 0, z);//Off set the grid a bit so it will round to whole interger by building system so everything will line up to the edge of the cube
                 GameObject cube = Instantiate(cubePrefab, position, Quaternion.identity);//So the actual instantiated gameObject are not rotating to anywhere
                 cube.GetComponent<GroundCube>().SetBuildSystem(buildSystem);
-                cube.transform.SetParent(GameObject.FindGameObjectWithTag("playersaved").transform);
+                cube.transform.SetParent(GameObject.FindGameObjectWithTag("floorplan").transform);
             }
 
         }

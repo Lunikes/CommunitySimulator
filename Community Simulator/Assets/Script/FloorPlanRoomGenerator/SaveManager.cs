@@ -23,15 +23,18 @@ public class SaveManager : MonoBehaviour
         List<Vector3> positionls = new List<Vector3>();//object position
         List<string> path = new List<string>();//object prefab file location
         List<Vector3> rotals = new List<Vector3>();//objcet rotation
+        List<Vector3> scales = new List<Vector3>();//objcet scale
 
         //for lopp to save each element which player created
         foreach (var g in go)
         {
             Vector3 position = new Vector3();
             Vector3 rota = new Vector3();
+            Vector3 sca = new Vector3();
 
             position = g.transform.position;
             rota = g.transform.eulerAngles;
+            sca = g.transform.localScale;
 
             //to check the object's name and  take out the "(clone)"
             var pos = g.name.IndexOf("(");
@@ -45,15 +48,17 @@ public class SaveManager : MonoBehaviour
                 ojname = g.name.Substring(0, pos);
 
             }
-
+            //Debug.Log(sca);
             path.Add(ojname);
             rotals.Add(rota);
+            scales.Add(sca);
             positionls.Add(position);
         }
 
         data.go = positionls;
         data.path = path;
         data.rotation = rotals;
+        data.scale = scales;
         data.xlength = GameObject.FindGameObjectWithTag("floorplan").GetComponent<GridSpawner>().xLength;
         data.zlength = GameObject.FindGameObjectWithTag("floorplan").GetComponent<GridSpawner>().zLength;
         //creat a json file to save the game data
@@ -82,10 +87,12 @@ public class SaveManager : MonoBehaviour
         {
 
             string pathname = floorpath + g + ".prefab";
-            var grid = AssetDatabase.LoadAssetAtPath(pathname, typeof(GameObject));
+            var grid = Resources.Load(pathname, typeof(GameObject));//for build
+                //AssetDatabase.LoadAssetAtPath(pathname, typeof(GameObject));//for unity editor 
             GameObject pre = Instantiate((GameObject)grid, saved.go[count], Quaternion.identity);
             pre.transform.SetParent(GameObject.FindGameObjectWithTag("floorplan").transform);
             pre.transform.eulerAngles = saved.rotation[count];
+           pre.transform.localScale = saved.scale[count];
             if (g == "GroundGridCube")
             {
                 pre.GetComponentInChildren<GroundCube>().SetBuildSystem(bs);
@@ -110,6 +117,7 @@ public class SaveManager : MonoBehaviour
         public List<Vector3> go;
         public List<string> path;
         public List<Vector3> rotation;
+        public List<Vector3> scale;
         public int xlength;
         public int zlength;
 
