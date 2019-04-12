@@ -140,7 +140,7 @@ public class Register : MonoBehaviour{
 
 
             //creat user in local file 
-            System.IO.File.WriteAllText(@"C:/Document/CSPD/" + userNameD + ".txt", form);  //The save location can be change
+           // System.IO.File.WriteAllText(@"C:/Document/CSPD/" + userNameD + ".txt", form);  //The save location can be change
 
             //reset the text content
             userNameD = userName.GetComponent<InputField>().text = "";

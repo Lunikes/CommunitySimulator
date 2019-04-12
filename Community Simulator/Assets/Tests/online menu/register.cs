@@ -12,7 +12,11 @@ namespace Tests
         [Test]
         public void registerSimplePasses()
         {
-            // Use the Assert class to test conditions
+            string userNameD = "test";
+            if (!System.IO.File.Exists(@"C:/Document/" + userNameD + ".txt")) //The save location can be change
+            {
+                
+            }
         }
 
         // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use

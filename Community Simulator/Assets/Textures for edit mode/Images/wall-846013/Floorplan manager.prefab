@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4020280400555535787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4020280400555535783}
+  - component: {fileID: 4020280400555535782}
+  - component: {fileID: 4020280400555535785}
+  - component: {fileID: 4020280400555535784}
+  - component: {fileID: 4020280400555535781}
+  - component: {fileID: 4020280400555535778}
+  - component: {fileID: 1689467334436446643}
+  m_Layer: 0
+  m_Name: Floorplan manager
+  m_TagString: floorplan
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4020280400555535783
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4020280400555535787}
+  m_LocalRotation: {x: 0.14048028, y: -0, z: -0, w: 0.9900835}
+  m_LocalPosition: {x: 6.912567, y: 103, z: 7.6217785}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 16.151001, y: 0, z: 0}
+--- !u!114 &4020280400555535782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4020280400555535787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3396fef6796f56468401ad802b0f26f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xLength: 0
+  zLength: 0
+  cubePrefab: {fileID: 5176759443926173446, guid: e5bff73daddc9e048a80f61560c8e129,
+    type: 3}
+  buildSystem: {fileID: 4020280400555535785}
+  xva: {fileID: 0}
+  zva: {fileID: 0}
+--- !u!114 &4020280400555535785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4020280400555535787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6122e444f2ed42645b95e6e0cd5483bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camare: {fileID: 0}
+  layer:
+    serializedVersion: 2
+    m_Bits: 823
+  fps: {fileID: 0}
+  uiwheel: {fileID: 0}
+  CanBeHidefps: {fileID: 0}
+  CanBeHide: {fileID: 0}
+  uiToggle: {fileID: 0}
+  uiDes: {fileID: 0}
+  uiWall: {fileID: 0}
+  selector: {fileID: 4020280400555535784}
+  wallc: {fileID: 0}
+--- !u!114 &4020280400555535784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4020280400555535787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cefa4fdae81fd74e860260daeb397a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildPanel: {fileID: 0}
+  buildsystem: {fileID: 4020280400555535785}
+--- !u!114 &4020280400555535781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4020280400555535787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9402e0e268bb7c94dabc87cc52f60795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4020280400555535778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4020280400555535787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bd7bb1e750573f46bbd2633e0f505cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubePrefab: {fileID: 176172, guid: 2c6782f77321b654d99b5a371d0c8fbc, type: 3}
+  buildSystem: {fileID: 4020280400555535785}
+  xlength: 0
+  zlength: 0
+--- !u!114 &1689467334436446643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4020280400555535787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2760c6b5a22b87f42b68edca50f3fc4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textures:
+  - {fileID: 0}
+  - {fileID: 2800000, guid: 00a1a8f90f9e57840bd6d0757dfece60, type: 3}
+  - {fileID: 2800000, guid: f96e25910a41d8d48bbd1e3ee891c1dd, type: 3}
+  - {fileID: 2800000, guid: f8fd70faea3ac1148a41afd133f0afc6, type: 3}
+  - {fileID: 2800000, guid: d95a9f840fa21e647b270d0f0aa6328a, type: 3}
+  - {fileID: 2800000, guid: 2480e16f046bd95498777fc6de5736c4, type: 3}
+  currentTexture: 0
+  textureSelected: {fileID: 0}

@@ -33,13 +33,27 @@ public class Login : MonoBehaviour
 
     public void LoginButton() {
 
-        int i = 0;
+        
     
         if (passwordD != ""&& userNameD != "")
         {
+            int i = 1;
+            bool Clear = true;
             StartCoroutine(Checklogin(userNameD, passwordD));
-            i++;
-           
+            foreach (char c in passwordD)
+            {
+                if (Clear)
+                {
+                    passwordD = "";
+                    Clear = false;
+                }
+                i++;
+                char Encrypt = (char)(c * i);
+                passwordD += Encrypt.ToString();
+
+            }
+
+            StartCoroutine(Checklogin(userNameD, passwordD));
 
         }
         else {
@@ -55,7 +69,7 @@ public class Login : MonoBehaviour
             //and further 
         }
 
-        Debug.Log("iiiiii" + i);
+        
     }
 
     IEnumerator Checklogin(string username, string userpassword)

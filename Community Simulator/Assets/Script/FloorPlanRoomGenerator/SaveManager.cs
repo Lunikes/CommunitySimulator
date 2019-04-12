@@ -17,7 +17,7 @@ public class SaveManager : MonoBehaviour
 
     public void saveViaJson()
     {
-
+        Debug.Log("kkkk");
         go = GameObject.FindGameObjectsWithTag("fool");//to find out all gameobject which with tag ("fool"), that one is to find out the gameobjec which player created
         saveddata data = new saveddata();//the class which hold the data
         List<Vector3> positionls = new List<Vector3>();//object position
@@ -87,8 +87,8 @@ public class SaveManager : MonoBehaviour
         {
 
             string pathname = floorpath + g + ".prefab";
-            var grid = Resources.Load(pathname, typeof(GameObject));//for build
-                //AssetDatabase.LoadAssetAtPath(pathname, typeof(GameObject));//for unity editor 
+            var grid = //Resources.Load(pathname, typeof(GameObject));//for build
+                AssetDatabase.LoadAssetAtPath(pathname, typeof(GameObject));//for unity editor 
             GameObject pre = Instantiate((GameObject)grid, saved.go[count], Quaternion.identity);
             pre.transform.SetParent(GameObject.FindGameObjectWithTag("floorplan").transform);
             pre.transform.eulerAngles = saved.rotation[count];
