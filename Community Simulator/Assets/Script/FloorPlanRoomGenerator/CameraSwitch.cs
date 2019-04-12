@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class CameraSwitch : MonoBehaviour
 {
-    public GameObject cameraOne;
-    public GameObject cameraTwo;
+    public Camera cameraOne;
+    public Camera cameraTwo;
+
+    private int tog =0;
 
     // Use this for initialization
     void Start()
@@ -58,21 +60,38 @@ public class CameraSwitch : MonoBehaviour
         //Set camera position 1
         if (camPosition == 0)
         {
-            cameraOne.SetActive(true);
+           // cameraOne.SetActive(true);
 
 
-            cameraTwo.SetActive(false);
+           // cameraTwo.SetActive(false);
         }
 
         //Set camera position 2
         if (camPosition == 1)
         {
-            cameraTwo.SetActive(true);
+            //cameraTwo.SetActive(true);
 
 
 
-            cameraOne.SetActive(false);
+           // cameraOne.SetActive(false);
         }
 
+    }
+
+    public void changeCamera()
+    {
+        if (tog == 0)
+        {
+            cameraTwo.enabled = true;
+            cameraOne.enabled = false;
+            tog = 1;
+        }
+        else
+        {
+            cameraTwo.enabled = false;
+            cameraOne.enabled = true;
+            tog = 0;
+        }
+        
     }
 }
