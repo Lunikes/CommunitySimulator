@@ -12,7 +12,14 @@ namespace Tests
         [Test]
         public void modelmanipulationSimplePasses()
         {
-            // Use the Assert class to test conditions
+            GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            cube.AddComponent<Rigidbody>();
+            cube.transform.position = new Vector3(8, 8, 0);
+
+            float height = cube.transform.position.x;
+            float width = cube.transform.position.x;
+
+            Assert.AreEqual(height, width);
         }
 
         // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use

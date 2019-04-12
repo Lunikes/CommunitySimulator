@@ -50,14 +50,6 @@ public class SkinColor : MonoBehaviour
     }
     public void changemenuscene(string scenename)
     {
-        BinaryFormatter formmater = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/Cha.racter";
-        FileStream stream = new FileStream(path, FileMode.Create);
-        List<float[]> posi = new List<float[]>();
-        SavedData data = new SavedData(posi);
-
-        formmater.Serialize(stream, data);
-        stream.Close();
 
         Application.LoadLevel(scenename);
     }

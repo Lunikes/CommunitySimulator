@@ -17,7 +17,7 @@ namespace Tests
             Renderer rend = go.GetComponent<Renderer>();
             rend.material.SetColor("_Color", Color.green);
             var answer = rend.material.GetColor("_Color");
-            string expected = "RGBA(0.000, 1.000, 0.000, 1.000)";
+            var expected = Color.green;
             Assert.AreEqual(expected, answer);
         }
 

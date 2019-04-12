@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-[CustomEditor(typeof(FaceShapeSlider))]
+
 public class FaceShapeSliderEditor : Editor
 {
     public enum State { auto, manual }
@@ -36,11 +36,7 @@ public class FaceShapeSliderEditor : Editor
 
     private void GUI_Auto()
     {
-        //Find CharacterCustomization in the Scene
-        //Get Dictionary
-        //Display List of keys as options for popup
 
-        //CharacterCustomization.Instance.Initialize();
         characterCustomization characterCustomization = GameObject.FindObjectOfType<characterCustomization>();
 
         if (characterCustomization == null)
