@@ -8,6 +8,7 @@ TagManager:
   - playersaved
   - fool
   - floorplan
+  - Savedableobject
   layers:
   - Default
   - TransparentFX
