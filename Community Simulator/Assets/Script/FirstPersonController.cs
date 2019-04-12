@@ -12,6 +12,9 @@ public class FirstPersonController : MonoBehaviour
     public float Gravity = -10f;
     float pitch = 0;
 
+    public GameObject canvasMM;
+    int escapeMenu = 0;
+
     [Range(5, 15)]
     float mouseSensitivity = 10f;
 
@@ -45,8 +48,34 @@ public class FirstPersonController : MonoBehaviour
 
         GetInput();
         UpdateMovement();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            playerMenu();
+        }
 
     }
+
+
+    void playerMenu()
+    {
+        if (escapeMenu == 0)
+        {
+            canvasMM.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            GameObject.Find("CameraFps").GetComponent<camerfps>().enabled = false;
+            escapeMenu = 1;
+        }
+        else
+        {
+            canvasMM.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            GameObject.Find("CameraFps").GetComponent<camerfps>().enabled = true;
+            escapeMenu = 0;
+        }
+    }
+
 
 
     void GetInput()
