@@ -17,7 +17,7 @@ namespace Tests
             Renderer rend = go.GetComponent<Renderer>();
             rend.material.SetColor("_Color", Color.green);
             var answer = rend.material.GetColor("_Color");
-            var expected = Color.green;
+            var expected = Color.blue;
             Assert.AreEqual(expected, answer);
         }
 
