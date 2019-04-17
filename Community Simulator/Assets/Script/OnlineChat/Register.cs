@@ -127,6 +127,7 @@ public class Register : MonoBehaviour{
                 passwordD += Encrypt.ToString();
                
             }
+            Debug.Log("usdbvishdbvhsdbv"+passwordD);
             /*
          So the way we Encrypt it
          For each character times the position it is and than we find the corresponding number and add one to it

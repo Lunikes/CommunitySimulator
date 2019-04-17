@@ -9,6 +9,7 @@ TagManager:
   - fool
   - floorplan
   - Savedableobject
+  - Charactor
   layers:
   - Default
   - TransparentFX

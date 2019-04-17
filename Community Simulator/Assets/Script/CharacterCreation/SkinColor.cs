@@ -8,6 +8,7 @@ public class SkinColor : MonoBehaviour
     public Material[] SkinColors;
     Material CurrMat;
     Renderer rend;
+    SaveManager savd;
 
     // Use this for initialization
     void Start()
@@ -49,7 +50,17 @@ public class SkinColor : MonoBehaviour
         CurrMat = rend.material;
     }
     public void changemenuscene(string scenename)
-    {
+    {/*
+        BinaryFormatter formmater = new BinaryFormatter();
+        string path = Application.persistentDataPath + "/Cha.racter";
+        FileStream stream = new FileStream(path, FileMode.Create);
+        List<float[]> posi = new List<float[]>();
+        SavedData data = new SavedData(posi);
+
+        formmater.Serialize(stream, data);
+        stream.Close();*/
+
+        //savd.saveCharactor();
 
         Application.LoadLevel(scenename);
     }
