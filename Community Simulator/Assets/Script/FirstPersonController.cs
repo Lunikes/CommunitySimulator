@@ -45,7 +45,19 @@ public class FirstPersonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            speed = speed * 2;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            speed = speed / 2;
+        }
+        //else
+        //{
+        //    speed = speed / 2;
+        //}
+        Debug.Log("line 56");
         GetInput();
         UpdateMovement();
         if (Input.GetKeyDown(KeyCode.Escape))

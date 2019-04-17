@@ -87,8 +87,8 @@ public class SaveManager : MonoBehaviour
         {
 
             string pathname = floorpath + g + ".prefab";
-            var grid = //Resources.Load(pathname, typeof(GameObject));//for build
-                AssetDatabase.LoadAssetAtPath(pathname, typeof(GameObject));//for unity editor 
+            var grid = Resources.Load(pathname, typeof(GameObject));//for build
+                //AssetDatabase.LoadAssetAtPath(pathname, typeof(GameObject));//for unity editor 
             GameObject pre = Instantiate((GameObject)grid, saved.go[count], Quaternion.identity);
             pre.transform.SetParent(GameObject.FindGameObjectWithTag("floorplan").transform);
             pre.transform.eulerAngles = saved.rotation[count];

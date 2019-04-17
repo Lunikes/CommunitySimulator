@@ -33,13 +33,11 @@ public class Login : MonoBehaviour
 
     public void LoginButton() {
 
-        
+        int i = 1;
     
         if (passwordD != ""&& userNameD != "")
         {
-            int i = 1;
             bool Clear = true;
-            StartCoroutine(Checklogin(userNameD, passwordD));
             foreach (char c in passwordD)
             {
                 if (Clear)
@@ -69,7 +67,7 @@ public class Login : MonoBehaviour
             //and further 
         }
 
-        
+      
     }
 
     IEnumerator Checklogin(string username, string userpassword)
@@ -88,7 +86,7 @@ public class Login : MonoBehaviour
 
         
             //Debug.Log("Form upload complete!");
-            //Debug.Log("WWWForm: " + www.downloadHandler.text);
+            Debug.Log("WWWForm: " + www.downloadHandler.text);
             if (www.downloadHandler.text == "login success")
             { Pw = true;
               Un = true;
