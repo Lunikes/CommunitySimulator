@@ -45,6 +45,18 @@ public class camerrotation3d : MonoBehaviour
                     }
 
             */
+        /*
+
+            if (RR) {
+                camPos.y += -1 * zoomSpeed * Time.deltaTime;
+
+            }
+            if (zoomOut)
+                {
+                    camPos.y += 1 * zoomSpeed * Time.deltaTime;
+                }
+
+        */
         float Mousescroll = Input.GetAxis("Mouse ScrollWheel");
         camPos.y += Mousescroll * zoomSpeed * Time.deltaTime;
 
